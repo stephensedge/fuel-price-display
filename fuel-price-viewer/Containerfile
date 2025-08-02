@@ -1,0 +1,8 @@
+FROM alpine:latest
+
+RUN apk add --no-cache feh bash xauth
+
+COPY viewer.sh /viewer.sh
+RUN chmod +x /viewer.sh
+
+CMD ["/viewer.sh"]
