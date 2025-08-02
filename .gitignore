@@ -1,0 +1,6 @@
+# Python venv and cache
+.venv/
+__pycache__/
+*.pyc
+current_price.png
+
