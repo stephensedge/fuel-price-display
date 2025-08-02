@@ -4,14 +4,14 @@ This project simulates a gas station fuel price sign using MQTT and Pillow. It c
 
 ---
 Architecture
-'''
+```
 ┌────────────────────────┐     ┌────────────────────────────┐
 │ Pricing Container      │     │ Display Container          │
 │ ─ Updates PNG file     │ ==> │ ─ Shows PNG in fullscreen  │
 │ ─ Writes to /output    │     │ ─ Reads /output            │
 └────────────────────────┘     └────────────────────────────┘
                  Shared volume (/output) mounted with :Z
-'''
+```
 
 
 
