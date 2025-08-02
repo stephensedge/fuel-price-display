@@ -30,7 +30,7 @@ cd fuel-price-display
 When working with testing prior to adding changes to the container use python venv env to work with
 NOTES:
 python3 -m venv .venv
-  137  source .venv/bin/activate
-  138  pip install pillow paho-mqtt
-  139  pip freeze > requirements.txt
+source .venv/bin/activate
+pip install pillow paho-mqtt
+pip freeze > requirements.txt
 
