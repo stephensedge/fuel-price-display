@@ -88,25 +88,25 @@ In this project:
 
 ## Usage
 
-1. **Start the MQTT Broker**  
+1. Start the MQTT Broker  
    ```bash
    podman run -d --name mqtt-broker \
      -p 1883:1883 \
      -v $(pwd)/mosquitto.conf:/mosquitto/config/mosquitto.conf:Z \
      docker.io/eclipse-mosquitto:latest
-``
-2. **Build and Run the Publisher**
-   ```bash
+
+2. Build and Run the Publisher
+```bash
 cd fuel-price-publisher
 podman build -t localhost/fuel-price-publisher .
 podman run -d --name price-publisher \
   -e MQTT_BROKER=host.containers.internal \
-  localhost/fuel-price-publisher
-```
+  localhost/fuel-price-publisher```
+
 3. **Build and Run the Viewer**
-   ```bash
-   cd fuel-price-viewer```
-``` podman build -f Containerfile.mqtt -t localhost/fuel-price-viewer:mqtt .
+```bash
+   cd fuel-price-viewer
+podman build -f Containerfile.mqtt -t localhost/fuel-price-viewer:mqtt .
 podman run -d --name price-viewer-mqtt \
   -e DISPLAY=$DISPLAY \
   -e MQTT_BROKER=host.containers.internal \
