@@ -3,7 +3,7 @@
 This project simulates a gas station fuel price sign using MQTT and Pillow. It can run either with real MQTT data or with simulated price updates in a Podman container on Red Hat Device Edge.
 
 ---
-Architecture- There are three containres that make up this servics demo. 
+Architecture- There are three containers that make this fuel pricing demo. 
 
 price-publisher: Generates and publishes gas prices
 
